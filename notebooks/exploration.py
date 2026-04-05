@@ -13,3 +13,6 @@ print(df["diagnostic"].value_counts())
 
 print("\n--- Température moyenne par diagnostic ---")
 print(df.groupby("diagnostic")["temperature"].mean())
+print("\n--- Nombre de patients par sexe et diagnostic ---")
+result = df.groupby(["sexe", "diagnostic"]).size()
+print(result)
